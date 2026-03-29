@@ -1,76 +1,55 @@
-import { Wrench, UserX, Link2, ShieldOff, RefreshCw, Bot } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { HelpCircle, Code2, Layers, GraduationCap } from "lucide-react";
 
 const PAIN_POINTS = [
   {
-    icon: Wrench,
-    title: "配置地狱",
-    description: "API Key、Token、插件、驱动……老板花半天配好，员工一脸懵",
-    quote: "我买的是电脑，不是让我学装系统的",
+    icon: HelpCircle,
+    title: "想用 AI，不知道从哪开始",
+    description: "AI 工具太多，概念太复杂，不知道哪个适合自己的业务",
   },
   {
-    icon: UserX,
-    title: "员工躺平",
-    description: "员工把手一摊：老板我不会。学习动力为零，着急的永远是老板",
-    quote: "提示词都要我来配，链接也要我来发",
+    icon: Code2,
+    title: "没有技术团队，落地成本高",
+    description: "招技术人员成本高，外包不了解业务，项目容易烂尾",
   },
   {
-    icon: Link2,
-    title: "链接噩梦",
-    description: "20个员工要发20个链接，改个提示词，所有链接重新发一遍",
-    quote: "我资产几个亿，不想天天搞这些",
+    icon: Layers,
+    title: "工具太多，不知道怎么选",
+    description: "市面上 AI 产品琳琅满目，试了一圈也不知道哪个真正有用",
   },
   {
-    icon: ShieldOff,
-    title: "权限失控",
-    description: "没有权限管理，员工拿着 AI 就跑，企业数据安全毫无保障",
-    quote: "AI 这么强，万一员工学会了自己干怎么办",
+    icon: GraduationCap,
+    title: "想要结果，不想学复杂工具",
+    description: "老板要的是经营结果，不是花时间学习又一个新系统",
   },
-  {
-    icon: RefreshCw,
-    title: "信息孤岛",
-    description: "换个设备信息全没，换个对话记忆清零，AI 连昨天聊过什么都不知道",
-    quote: "每次都要从头教一遍，比新员工还笨",
-  },
-  {
-    icon: Bot,
-    title: "又蠢又难",
-    description: "用便宜模型觉得 AI 太蠢，用贵模型又不会配置，进退两难",
-    quote: "不是说 AI 万能吗？到我这儿就不行了？",
-  },
-] as const;
+];
 
 export function EnterprisePainSection() {
   return (
-    <section className="py-20 sm:py-24" id="enterprise">
+    <section id="pain" className="bg-muted/30 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-4 text-sm font-semibold text-red-500">🔥 企业 AI 方案</div>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            为什么企业用 AI 这么<span className="text-gradient">痛苦</span>？
+        <div className="text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            这些问题，是不是<span className="text-gradient">正困扰着你？</span>
           </h2>
-          <p className="mt-4 max-w-xl text-muted-foreground">
-            AI 明明很强大，但 90% 的企业卡在「用不起来」
+          <p className="mt-4 text-lg text-muted-foreground">
+            90% 的中小企业老板都遇到过
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {PAIN_POINTS.map((item) => (
-            <Card
+            <div
               key={item.title}
-              className="group transition-all hover:-translate-y-1 hover:shadow-lg hover:border-red-200"
+              className="group rounded-xl border border-border bg-background p-6 shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
             >
-              <CardContent className="flex flex-col gap-3 pt-2">
-                <div className="flex size-10 items-center justify-center rounded-lg bg-red-50">
-                  <item.icon className="size-5 text-red-500" />
-                </div>
-                <h3 className="text-base font-semibold">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-                <p className="mt-auto border-l-2 border-red-200 pl-3 text-xs italic text-muted-foreground">
-                  &ldquo;{item.quote}&rdquo;
-                </p>
-              </CardContent>
-            </Card>
+              <div className="mb-4 inline-flex rounded-lg bg-red-50 p-3 text-red-600">
+                <item.icon className="size-6" />
+              </div>
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {item.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

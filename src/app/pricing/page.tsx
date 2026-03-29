@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
   title: "定价",
-  description: "5Dock AI 模型定价，透明按量计费",
+  description: "AI 搞定 模型定价，透明按量计费",
 }
 
 const MODEL_CATEGORIES = [

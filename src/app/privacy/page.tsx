@@ -3,8 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
-  title: "隐私政策 | 5Dock AI",
-  description: "5Dock AI 隐私政策",
+  title: "隐私政策 | AI 搞定",
+  description: "AI 搞定 隐私政策",
 }
 
 const LAST_UPDATED = "2025年1月1日"
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
             <CardTitle>1. 我们收集的信息</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-            <p>当您使用 5Dock AI 时，我们会收集以下信息：</p>
+            <p>当您使用 AI 搞定 时，我们会收集以下信息：</p>
             <ul className="list-disc pl-5 space-y-2">
               <li><strong>账号信息：</strong>注册时提供的用户名和邮箱地址（邮箱为可选项）。</li>
               <li><strong>用量数据：</strong>API 调用记录，包括调用时间、模型名称、Token 消耗量及费用。</li>

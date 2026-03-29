@@ -31,7 +31,7 @@ export function FeaturesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            为什么选择 <span className="text-gradient">5Dock AI</span>
+            为什么选择 <span className="text-gradient">AI 搞定</span>
           </h2>
           <p className="mt-4 max-w-xl text-muted-foreground">
             一站式 AI API 中转服务，让接入 AI 变得简单

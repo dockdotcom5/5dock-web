@@ -7,11 +7,11 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: {
-    default: "5Dock AI - 为所有人提供最前沿的 AI 能力",
-    template: "%s | 5Dock AI",
+    default: "AI 搞定 - 零学习成本，将 AI 应用于公司经营",
+    template: "%s | AI 搞定",
   },
   description:
-    "企业 AI 员工平台 | AI API 中转站 | 个人 AI 伙伴 | AI 培训课程。让天下没有难用的 AI。",
+    "AI 搞定中小企业一切需求。零学习成本使用世界最强 AI 科技成果，解决经营问题，提高经营效率。",
 }
 
 export default function RootLayout({

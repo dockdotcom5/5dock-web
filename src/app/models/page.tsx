@@ -5,13 +5,13 @@ import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
   title: "模型目录",
-  description: "5Dock AI 支持的所有 AI 模型列表",
+  description: "AI 搞定 支持的所有 AI 模型列表",
 }
 
 const MODELS = [
   {
     provider: "OpenAI",
-    description: "GPT-5 系列及 Codex 编程模型，通过 5Dock AI 访问",
+    description: "GPT-5 系列及 Codex 编程模型，通过 AI 搞定 访问",
     models: [
       { name: "gpt-5", context: "128K", capability: "GPT-5 旗舰对话模型", tags: ["文本", "视觉"] },
       { name: "gpt-5.1", context: "128K", capability: "GPT-5.1 增强版本", tags: ["文本", "编程"] },
@@ -59,7 +59,7 @@ export default function ModelsPage() {
       <div className="mb-12 text-center">
         <h1 className="text-4xl font-bold tracking-tight">模型目录</h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          通过 5Dock AI 访问 24 个前沿 AI 模型，一个 API Key 即可调用
+          通过 AI 搞定 访问 24 个前沿 AI 模型，一个 API Key 即可调用
         </p>
       </div>
 

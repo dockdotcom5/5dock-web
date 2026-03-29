@@ -39,7 +39,7 @@ interface Announcement {
   readonly isNew: boolean
 }
 
-const BASE_URL = "https://api.5dock.com/v1"
+const BASE_URL = "https://api.aigetdone.com/v1"
 
 const CODE_EXAMPLE = `curl ${BASE_URL}/chat/completions \\
   -H "Authorization: Bearer sk-****" \\

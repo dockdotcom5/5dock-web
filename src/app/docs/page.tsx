@@ -5,11 +5,11 @@ import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
   title: "API 文档",
-  description: "5Dock AI API 使用文档和接入指南",
+  description: "AI 搞定 API 使用文档和接入指南",
 }
 
 const CODE_EXAMPLES = {
-  curl: `curl https://api.5dock.com/v1/chat/completions \\
+  curl: `curl https://api.aigetdone.com/v1/chat/completions \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -d '{
@@ -22,7 +22,7 @@ const CODE_EXAMPLES = {
 
 client = OpenAI(
     api_key="YOUR_API_KEY",
-    base_url="https://api.5dock.com/v1"
+    base_url="https://api.aigetdone.com/v1"
 )
 
 response = client.chat.completions.create(
@@ -37,7 +37,7 @@ print(response.choices[0].message.content)`,
 
 const client = new OpenAI({
   apiKey: 'YOUR_API_KEY',
-  baseURL: 'https://api.5dock.com/v1',
+  baseURL: 'https://api.aigetdone.com/v1',
 });
 
 const response = await client.chat.completions.create({
@@ -76,7 +76,7 @@ export default function DocsPage() {
         <div className="grid gap-6 md:grid-cols-3">
           {[
             { step: "1", title: "获取 API Key", description: "注册账号后，在控制台创建 API Key" },
-            { step: "2", title: "设置 Base URL", description: "将 API 请求地址替换为 https://api.5dock.com/v1" },
+            { step: "2", title: "设置 Base URL", description: "将 API 请求地址替换为 https://api.aigetdone.com/v1" },
             { step: "3", title: "发送请求", description: "使用你熟悉的 SDK 或 HTTP 客户端发送请求" },
           ].map((item) => (
             <Card key={item.step}>
@@ -104,7 +104,7 @@ export default function DocsPage() {
         <Card>
           <CardContent className="pt-6">
             <code className="rounded-lg bg-muted px-4 py-3 text-sm font-mono block">
-              https://api.5dock.com/v1
+              https://api.aigetdone.com/v1
             </code>
             <p className="mt-4 text-sm text-muted-foreground">
               所有请求都需要在 Header 中携带 API Key：

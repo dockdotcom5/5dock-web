@@ -1,55 +1,65 @@
-import { Lightbulb } from "lucide-react";
+import { Zap, Rocket, Crown, Target, TrendingUp } from "lucide-react";
 
-const COMPARISONS = [
-  { label: "美工团队（10人）", old: "¥15万/月", new: "¥3万/月" },
-  { label: "客服团队（20人）", old: "¥30万/月", new: "¥8万/月" },
-  { label: "上手培训时间", old: "1-2 周", new: "5 分钟" },
-  { label: "7×24 工作", old: "❌ 不可能", new: "✅ 全天候" },
-  { label: "离职风险", old: "❌ 随时可能", new: "✅ 永不离职" },
-  { label: "管理成本", old: "高（社保/纠纷/考勤）", new: "几乎为零" },
-] as const;
+const ADVANTAGES = [
+  {
+    icon: Zap,
+    title: "零学习成本",
+    description: "不需要懂技术，不需要学新工具，会说话就能用 AI",
+  },
+  {
+    icon: Rocket,
+    title: "快速部署",
+    description: "最快 7 天上线，无需漫长的开发周期和复杂的系统对接",
+  },
+  {
+    icon: Crown,
+    title: "面向老板",
+    description: "不是给技术人员用的工具，而是帮老板解决经营问题的方案",
+  },
+  {
+    icon: Target,
+    title: "聚焦经营结果",
+    description: "不卖概念，不堆功能，只关注帮您省多少钱、赚多少钱",
+  },
+  {
+    icon: TrendingUp,
+    title: "持续接入最新 AI",
+    description: "全球最强 AI 模型持续迭代，您的方案自动升级，保持竞争力",
+  },
+];
 
 export function EnterpriseValueSection() {
   return (
-    <section className="bg-muted/30 py-20 sm:py-24">
+    <section id="advantages" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            算一笔账：AI 员工 vs 传统员工
+        <div className="text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            为什么选择 <span className="text-gradient">AI 搞定</span>
           </h2>
-          <p className="mt-4 max-w-xl text-muted-foreground">
-            不是一个人的工资，而是一整个团队的成本
+          <p className="mt-4 text-lg text-muted-foreground">
+            我们和其他 AI 产品最大的区别
           </p>
         </div>
 
-        {/* Comparison Table */}
-        <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-xl border border-border bg-background shadow-sm">
-          {/* Header */}
-          <div className="grid grid-cols-3 border-b border-border bg-muted/50 px-4 py-3 text-sm font-semibold sm:px-6">
-            <span></span>
-            <span className="text-center">传统方式</span>
-            <span className="text-center">5Dock AI 员工</span>
-          </div>
-          {/* Rows */}
-          {COMPARISONS.map((row) => (
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {ADVANTAGES.map((item) => (
             <div
-              key={row.label}
-              className="grid grid-cols-3 border-b border-border px-4 py-3.5 text-sm last:border-b-0 sm:px-6"
+              key={item.title}
+              className="flex gap-4 rounded-xl border border-border bg-background p-6 shadow-sm"
             >
-              <span className="font-medium">{row.label}</span>
-              <span className="text-center text-muted-foreground">{row.old}</span>
-              <span className="text-center font-semibold text-green-600">{row.new}</span>
+              <div className="flex-shrink-0">
+                <div className="inline-flex rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 p-3 text-white">
+                  <item.icon className="size-6" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
-        </div>
-
-        {/* Callout */}
-        <div className="mx-auto mt-8 flex max-w-3xl items-start gap-4 rounded-xl border border-primary/30 bg-primary/5 p-6">
-          <Lightbulb className="mt-0.5 size-6 shrink-0 text-primary" />
-          <div className="text-sm leading-relaxed">
-            <strong>一个简单的数学题：</strong>如果 AI 帮你省了 3 个岗位，每个岗位省 3 万/月 = 
-            <span className="font-bold text-primary"> 每月省 9 万</span>。你愿意花 5 万/月来获得这个能力吗？
-          </div>
         </div>
       </div>
     </section>

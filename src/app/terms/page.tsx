@@ -3,8 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
-  title: "服务条款 | 5Dock AI",
-  description: "5Dock AI 服务条款",
+  title: "服务条款 | AI 搞定",
+  description: "AI 搞定 服务条款",
 }
 
 const LAST_UPDATED = "2025年1月1日"
@@ -24,7 +24,7 @@ export default function TermsPage() {
           </CardHeader>
           <CardContent className="space-y-3 text-sm text-muted-foreground leading-relaxed">
             <p>
-              5Dock AI（以下简称"本平台"）提供 AI 大语言模型 API 中转服务，聚合 OpenAI、Anthropic、Google 等主流 AI 提供商的模型，以统一的 OpenAI 兼容接口对外开放。
+              AI 搞定（以下简称"本平台"）提供 AI 大语言模型 API 中转服务，聚合 OpenAI、Anthropic、Google 等主流 AI 提供商的模型，以统一的 OpenAI 兼容接口对外开放。
             </p>
             <p>
               用户通过注册账号并充值，获得 API Key 后即可调用本平台支持的所有模型，按实际使用量扣费。

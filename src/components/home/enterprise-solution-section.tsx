@@ -1,102 +1,58 @@
-import { UserPlus, Brain, Users, MessageSquare, Lock, RefreshCcw, BarChart3, Cpu } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Search, Settings, Cpu, RefreshCw } from "lucide-react";
 
 const STEPS = [
   {
-    num: "01",
-    icon: UserPlus,
-    title: "创建 AI 员工",
-    description: "选择岗位模板（美工/客服/运营/文案...），AI 员工自动具备该岗位专业技能",
+    icon: Search,
+    step: "01",
+    title: "识别您的业务场景",
+    description: "我们深入了解您的业务流程，找出最适合 AI 提效的环节",
   },
   {
-    num: "02",
-    icon: Brain,
-    title: "注入企业记忆",
-    description: "上传公司资料、产品信息、品牌风格，AI 员工自动理解你的业务",
-  },
-  {
-    num: "03",
-    icon: Users,
-    title: "分配给团队",
-    description: "一键分配给不同部门的员工，权限隔离，数据安全",
-  },
-  {
-    num: "04",
-    icon: MessageSquare,
-    title: "说话即工作",
-    description: "员工只需用自然语言提需求，AI 员工自动完成并交付结果",
-  },
-] as const;
-
-const FEATURES = [
-  {
-    icon: Lock,
-    title: "企业级权限管控",
-    description: "老板控制 AI 能力边界，员工只能在授权范围内使用",
-  },
-  {
-    icon: RefreshCcw,
-    title: "一键升级同步",
-    description: "后台更新技能/提示词，所有员工端自动同步，不用再发链接",
-  },
-  {
-    icon: BarChart3,
-    title: "用量看板",
-    description: "谁在用、用了多少、效果如何，管理层一目了然",
+    icon: Settings,
+    step: "02",
+    title: "接入经营流程",
+    description: "将 AI 能力无缝融入您现有的工作流程，无需改变习惯",
   },
   {
     icon: Cpu,
-    title: "持久记忆",
-    description: "AI 员工记住每次交互，越用越懂你的业务",
+    step: "03",
+    title: "配置合适的 AI 能力",
+    description: "根据您的具体需求，配置最合适的 AI 模型和工具",
   },
-] as const;
+  {
+    icon: RefreshCw,
+    step: "04",
+    title: "持续升级 AI 方案",
+    description: "AI 技术日新月异，我们帮您持续迭代，保持竞争力",
+  },
+];
 
 export function EnterpriseSolutionSection() {
   return (
-    <section className="bg-muted/30 py-20 sm:py-24">
+    <section id="solutions" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            像招员工一样，<span className="text-gradient">招 AI</span>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            我们如何帮你<span className="text-gradient">搞定 AI</span>
           </h2>
-          <p className="mt-4 max-w-xl text-muted-foreground">
-            5Dock 把 AI 的复杂性全部屏蔽，企业只需要「说话」
+          <p className="mt-4 text-lg text-muted-foreground">
+            满足您最直接的需求，四步搞定
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((step) => (
-            <Card
-              key={step.num}
-              className="group relative transition-all hover:-translate-y-1 hover:shadow-lg"
-            >
-              <CardContent className="flex flex-col items-center gap-3 pt-2 text-center">
-                <span className="text-xs font-bold text-primary">{step.num}</span>
-                <div className="bg-gradient-brand flex size-12 items-center justify-center rounded-xl">
-                  <step.icon className="size-6 text-white" />
-                </div>
-                <h3 className="text-base font-semibold">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Features */}
-        <div className="mt-16 grid gap-6 sm:grid-cols-2">
-          {FEATURES.map((feature) => (
-            <div
-              key={feature.title}
-              className="flex items-start gap-4 rounded-xl border border-border bg-background p-5 transition-all hover:border-primary/30 hover:shadow-sm"
-            >
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                <feature.icon className="size-5 text-primary" />
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {STEPS.map((item) => (
+            <div key={item.step} className="relative text-center">
+              <div className="mx-auto mb-4 inline-flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg">
+                <item.icon className="size-7" />
               </div>
-              <div>
-                <h4 className="font-semibold">{feature.title}</h4>
-                <p className="mt-1 text-sm text-muted-foreground">{feature.description}</p>
+              <div className="mb-2 text-sm font-bold text-blue-600">
+                STEP {item.step}
               </div>
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

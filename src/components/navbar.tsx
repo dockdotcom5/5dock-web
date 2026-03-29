@@ -26,9 +26,10 @@ import { quotaToDollars } from "@/lib/api";
 
 const NAV_LINKS = [
   { href: "/", label: "首页" },
-  { href: "/models", label: "模型" },
-  { href: "/pricing", label: "定价" },
-  { href: "/docs", label: "文档" },
+  { href: "#scenes", label: "应用场景" },
+  { href: "#solutions", label: "解决方案" },
+  { href: "#faq", label: "常见问题" },
+  { href: "/contact", label: "预约演示" },
 ] as const;
 
 function UserMenu() {
@@ -189,7 +190,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1.5">
           <span className="text-gradient text-xl font-bold tracking-tight">
-            5Dock
+            AI 搞定
           </span>
           <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
             AI
@@ -229,7 +230,7 @@ export function Navbar() {
               <SheetHeader>
                 <SheetTitle>
                   <span className="text-gradient text-lg font-bold">
-                    5Dock
+                    AI 搞定
                   </span>{" "}
                   <Badge
                     variant="secondary"

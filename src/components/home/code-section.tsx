@@ -8,20 +8,20 @@ const CODE_TABS = [
     id: "python",
     label: "Python",
     code: `from openai import OpenAI
-client = OpenAI(base_url="https://api.5dock.com/v1", api_key="sk-xxx")
+client = OpenAI(base_url="https://api.aigetdone.com/v1", api_key="sk-xxx")
 response = client.chat.completions.create(model="claude-sonnet-4-20250514", messages=[{"role": "user", "content": "Hello"}])`,
   },
   {
     id: "nodejs",
     label: "Node.js",
     code: `import OpenAI from "openai";
-const client = new OpenAI({ baseURL: "https://api.5dock.com/v1", apiKey: "sk-xxx" });
+const client = new OpenAI({ baseURL: "https://api.aigetdone.com/v1", apiKey: "sk-xxx" });
 const response = await client.chat.completions.create({ model: "claude-sonnet-4-20250514", messages: [{ role: "user", content: "Hello" }] });`,
   },
   {
     id: "curl",
     label: "cURL",
-    code: `curl https://api.5dock.com/v1/chat/completions \\
+    code: `curl https://api.aigetdone.com/v1/chat/completions \\
   -H "Authorization: Bearer sk-xxx" \\
   -H "Content-Type: application/json" \\
   -d '{"model":"claude-sonnet-4-20250514","messages":[{"role":"user","content":"Hello"}]}'`,

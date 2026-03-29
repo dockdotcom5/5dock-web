@@ -59,7 +59,7 @@ async function handler(
     // Forward set-cookie headers, rewriting Domain to match proxy origin
     const setCookie = res.headers.getSetCookie();
     for (const c of setCookie) {
-      // Strip Domain= attribute so the browser uses the current host (5dock.com)
+      // Strip Domain= attribute so the browser uses the current host (aigetdone.com)
       // Also strip Secure flag when running on HTTP (dev), keep it on HTTPS (prod)
       const rewritten = c
         .replace(/;\s*Domain=[^;]*/gi, '')

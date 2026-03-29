@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "注册 | 5Dock AI",
-  description: "创建你的 5Dock AI 账号，注册即送 $1 体验额度",
+  title: "注册 | AI 搞定",
+  description: "创建你的 AI 搞定 账号，注册即送 $1 体验额度",
 }
 
 export default function RegisterLayout({

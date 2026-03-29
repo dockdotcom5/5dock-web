@@ -52,7 +52,7 @@ export default function LoginPage() {
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">欢迎回来</CardTitle>
           <p className="text-sm text-muted-foreground">
-            登录你的 5Dock AI 账号
+            登录你的 AI 搞定 账号
           </p>
         </CardHeader>
         <CardContent className="space-y-6">

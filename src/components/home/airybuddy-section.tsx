@@ -24,7 +24,7 @@ export function AiryBuddySection() {
     <section className="bg-muted/30 py-20 sm:py-24" id="airybuddy">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          <div className="mb-4 text-sm font-semibold text-purple-600">💜 AiryBuddy</div>
+          <div className="mb-4 text-sm font-semibold text-green-500">💜 AiryBuddy</div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             你的 <span className="text-gradient">AI 伙伴</span>
           </h2>

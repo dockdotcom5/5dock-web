@@ -4,23 +4,15 @@ const FOOTER_GROUPS = [
   {
     title: "产品",
     links: [
-      { label: "企业 AI 方案", href: "#enterprise" },
-      { label: "API 中转站", href: "#api" },
-      { label: "AiryBuddy", href: "#airybuddy" },
-      { label: "AI 培训", href: "#training" },
+      { label: "应用场景", href: "#scenes" },
+      { label: "解决方案", href: "#solutions" },
+      { label: "常见问题", href: "#faq" },
     ],
   },
   {
-    title: "开发者",
+    title: "服务",
     links: [
-      { label: "模型列表", href: "/models" },
-      { label: "定价", href: "/pricing" },
-      { label: "文档", href: "/docs" },
-    ],
-  },
-  {
-    title: "法律",
-    links: [
+      { label: "预约演示", href: "/contact" },
       { label: "服务条款", href: "/terms" },
       { label: "隐私政策", href: "/privacy" },
     ],
@@ -31,15 +23,15 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-3 lg:col-span-2">
-            <span className="text-gradient text-xl font-bold">5Dock AI</span>
+            <span className="text-gradient text-xl font-bold">AI 搞定</span>
             <p className="text-sm text-muted-foreground">
-              为所有人提供最前沿的 AI 能力
+              零学习成本，将 AI 应用于公司经营
             </p>
             <p className="text-sm text-muted-foreground">
-              企业 AI 员工平台 · API 中转站 · AI 伙伴 · AI 培训
+              AI 搞定中小企业一切需求
             </p>
           </div>
 
@@ -66,7 +58,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-10 border-t border-border pt-6">
           <p className="text-center text-xs text-muted-foreground">
-            &copy; 2026 5Dock AI. All rights reserved.
+            &copy; 2026 AI 搞定. All rights reserved.
           </p>
         </div>
       </div>

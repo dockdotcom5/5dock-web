@@ -1,36 +1,32 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 export function CtaSection() {
   return (
-    <section className="bg-muted/30 py-20 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            准备好让 AI 帮你<span className="text-gradient">省钱</span>了吗？
+    <section className="py-20 sm:py-28">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-purple-700 p-10 text-center text-white shadow-2xl sm:p-14">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            让 AI 帮您的企业降本增效
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            2-3 天完成部署，员工上手只需 5 分钟
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
+            不需要懂技术，不需要大预算，只需要一次沟通，我们帮您找到最适合的 AI 方案
           </p>
-          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
-              href="#contact"
-              className="bg-gradient-brand inline-flex items-center gap-2 rounded-lg px-10 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:opacity-90 hover:shadow-xl hover:shadow-blue-500/30"
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-semibold text-blue-700 shadow-lg transition-all hover:bg-blue-50"
             >
-              预约企业演示
+              预约免费演示
               <ArrowRight className="size-4" />
             </Link>
-            <Link
-              href="/register"
-              className="inline-flex items-center gap-2 rounded-lg border border-border px-10 py-3.5 text-base font-semibold transition-colors hover:bg-muted"
+            <a
+              href="tel:13800138000"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-8 py-3 text-base font-semibold text-white transition-all hover:bg-white/10"
             >
-              免费注册 API
-            </Link>
-          </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span>✅ 免费需求评估</span>
-            <span>✅ 定制化方案</span>
-            <span>✅ 7 天无理由退款</span>
+              <Phone className="size-4" />
+              电话咨询
+            </a>
           </div>
         </div>
       </div>

@@ -3,8 +3,8 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "忘记密码 | 5Dock AI",
-  description: "重置你的 5Dock AI 账号密码",
+  title: "忘记密码 | AI 搞定",
+  description: "重置你的 AI 搞定 账号密码",
 }
 
 export default function ForgotPasswordPage() {

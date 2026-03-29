@@ -157,7 +157,7 @@ export default function DashboardLayout({
             href="/dashboard"
             className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-xl font-bold text-transparent"
           >
-            5Dock AI
+            AI 搞定
           </Link>
         </div>
         <Separator />
@@ -178,13 +178,13 @@ export default function DashboardLayout({
             }
           />
           <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-lg font-bold text-transparent">
-            5Dock AI
+            AI 搞定
           </span>
         </div>
         <SheetContent side="left" className="w-60 p-0">
           <SheetHeader className="flex h-14 items-center px-6">
             <SheetTitle className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-xl font-bold text-transparent">
-              5Dock AI
+              AI 搞定
             </SheetTitle>
           </SheetHeader>
           <Separator />
